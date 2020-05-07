@@ -30,3 +30,25 @@ def climbStairs(self, n: int) -> int:
 
 作者：antic-2
 链接：https://leetcode-cn.com/problems/climbing-stairs/solution/pythondui-guan-fang-dong-tai-gui-hua-fa-geng-yi-do/
+        
+        
+        
+        
+java版本        
+public class Solution {
+    public int climbStairs(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        int[] dp = new int[n + 1];
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[n];
+    }
+}
+
+作者：LeetCode
+链接：https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-by-leetcode/
